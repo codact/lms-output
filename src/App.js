@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
-import About from './components/About.jsx';
-import Home from './components/Home.jsx';
+import Home from './Views/Home.jsx';
+import LoginPage from './Views/LoginPage.jsx';
+import SignupPage from './Views/SignupPage.jsx'
 
 export default class App extends Component {
   render() {
@@ -12,7 +13,8 @@ export default class App extends Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
+            <Route exact path="/login" component={LoginPage} />
+            <Route exact path="/signup" component={SignupPage} />
           </Switch>
         </div>
       </Router>
